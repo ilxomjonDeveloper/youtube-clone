@@ -8,7 +8,7 @@ export default class Sidebar extends Component {
       <Container>
         {sidebar.map(({ id, title, data }) => (
           <Wrapper key={id}>
-            {title && <Title title>{title}</Title>}
+            {title === true && <Title title>{title}</Title>}
             {data.map(({id, title: subTitle, icon: Icon, src}) => (
               <ItemWrapper key={id}>
                 {Icon ? <Icon /> : <UserAvatar src={src}></UserAvatar>}
